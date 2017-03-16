@@ -1,0 +1,7 @@
+
+.gitignore
+.idea/vcs.xml
+.idea/workspace.xml
+out/
+src/main/resources/
+target/

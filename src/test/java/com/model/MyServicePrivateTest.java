@@ -17,19 +17,24 @@ public class MyServicePrivateTest {
     public void init() {
         myService = new MyService();
     }
+
     @Test
     public void getIterationCount() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
         Method method=MyService.class.getDeclaredMethod("getIterationCount");
+        final int expected=241;
         method.setAccessible(true);
-        assertEquals(241,method.invoke(myService));
+        assertEquals(expected,method.invoke(myService));
     }
 
     @Test
     public void func() throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
+        final double expectedOne=5.195;
+        final double expectedTwo=5.482;
+
         Method method=MyService.class.getDeclaredMethod("func",double.class);
         method.setAccessible(true);
         assert (Double.isInfinite((Double) method.invoke(myService,0)));
-        assertEquals(5.195,(Double) method.invoke(myService,180),0.001);
-        assertEquals(5.482,(Double)method.invoke(myService,240),0.001);
+        assertEquals(expectedOne,(Double) method.invoke(myService,180),0.001);
+        assertEquals(expectedTwo,(Double)method.invoke(myService,240),0.001);
     }
 }

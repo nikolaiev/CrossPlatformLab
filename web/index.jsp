@@ -3,13 +3,13 @@
     <h2>Hello World!</h2>
     <br>
     <form action="./controller" method="get">
-      <input type="text" name="xMin" value="0.8">
+      <label>xMin = </label><input type="text" name="xMin" value="1">
       <br>
-      <input type="text" name="xMax" value="2">
+      <label>xMax = </label><input type="text" name="xMax" value="10">
       <br>
-      <input type="text" name="step" value="0.005">
+      <label>step = </label><input type="text" name="step" value="3">
       <br>
-      <input type="text" name="a" value="1.5">
+      <label>a = </label><input type="text" name="a" value="0.1">
       <br>
       <input type="submit">
     </form>
